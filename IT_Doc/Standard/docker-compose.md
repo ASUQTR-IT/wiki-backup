@@ -2,7 +2,7 @@
 title: Docker Compose
 description: Standard used for our docker-compose files
 published: true
-date: 2023-05-05T17:41:04.575Z
+date: 2023-05-05T17:47:48.366Z
 tags: it, server
 editor: markdown
 dateCreated: 2023-05-05T17:35:48.358Z
@@ -31,14 +31,6 @@ We order our files in the following order :
 3. volumes: the volumes we need to specify globally (typically those not associated to a directory)
 4. networks: The networks specifications
 
-It will give us something like this :
-
-```yml
-	version: "3.9"
-  
-  services: 
-```
-
   
 ### Services
 
@@ -48,6 +40,29 @@ We use 3 names for our services :
 - backend : for anykind of backend (exemple: the ldap service)
 
 
-### The service attributes
+#### The service attributes
 
-We follow a specific order to maintain uniformity in our docker-compose files, this allows us to kinkly find something whatever the service
+We follow a specific order to maintain uniformity in our docker-compose files, this allows us to kinkly find something whatever the service is.
+
+The service attributes order is as follows:
+1. image/build: one of the 2
+2. container_name: The container name, very important to allow us to properly monitor the containers
+3. restart: typicaly set to -> unless-stopped
+4. depends_on: indicates if the service depends on another service, exemple waiting for the db to finish
+5. volumes: The folder/files to associate outside:inside the container (start with ./ so we can copy the directories to backups)
+6. environment: the env files to pass to the container
+7. ports: The ports to open between the server:container. We will always specify the home on the serverside ```127.0.0.1:port:containerport```
+8. networks : specifies if the services uses a specific network
+
+
+### File structure exemple
+
+It will give us something like this :
+
+```yml
+	version: "3.9"
+  
+  services:
+  	frontend:
+    	
+```
