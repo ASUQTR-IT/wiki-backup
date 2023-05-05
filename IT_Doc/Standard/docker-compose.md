@@ -2,7 +2,7 @@
 title: Docker Compose
 description: Standard used for our docker-compose files
 published: true
-date: 2023-05-05T18:01:50.295Z
+date: 2023-05-05T18:02:18.851Z
 tags: it, server
 editor: markdown
 dateCreated: 2023-05-05T17:35:48.358Z
@@ -51,6 +51,7 @@ The service attributes order is as follows:
 - depends_on: indicates if the service depends on another service, exemple waiting for the db to finish
 - healthcheck: specifies how the service should check for container heath
 - volumes: The folder/files to associate outside:inside the container (start with ./ so we can copy the directories to backups)
+- command: cmd commands to pass the container
 - environment: the env files to pass to the container
 - ports: The ports to open between the server:container. We will always specify the home on the serverside ```127.0.0.1:port:containerport```
 - networks : specifies if the services uses a specific network
