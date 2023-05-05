@@ -2,7 +2,7 @@
 title: Docker Compose
 description: Standard used for our docker-compose files
 published: true
-date: 2023-05-05T17:51:18.974Z
+date: 2023-05-05T17:51:40.983Z
 tags: it, server
 editor: markdown
 dateCreated: 2023-05-05T17:35:48.358Z
@@ -69,7 +69,8 @@ It will give us something like this :
         container_name: gitea
         restart: unless-stopped
         depends_on:
-          - database
+          db: # Will specify in the db service the healthcheck
+        		condition: service_healthy
         volumes:
           - ./gitea-data:/data
           - /etc/timezone:/etc/timezone:ro
