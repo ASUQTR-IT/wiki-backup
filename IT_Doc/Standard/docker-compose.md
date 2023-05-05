@@ -2,7 +2,7 @@
 title: Docker Compose
 description: Standard used for our docker-compose files
 published: true
-date: 2023-05-05T18:02:49.585Z
+date: 2023-05-05T18:06:12.348Z
 tags: it, server
 editor: markdown
 dateCreated: 2023-05-05T17:35:48.358Z
@@ -35,9 +35,11 @@ We order our files in the following order :
 ### Services
 
 We use 3 names for our services :
-- db : for a database
 - frontend : for a web interface or another frontend
 - backend : for anykind of backend (exemple: the ldap service)
+- db : for a database
+
+The previous order is to be maintened
 
 
 #### The service attributes
