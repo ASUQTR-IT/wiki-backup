@@ -2,7 +2,7 @@
 title: Docker Compose
 description: Standard used for our docker-compose files
 published: true
-date: 2023-05-05T17:47:48.366Z
+date: 2023-05-05T17:49:16.849Z
 tags: it, server
 editor: markdown
 dateCreated: 2023-05-05T17:35:48.358Z
@@ -63,6 +63,27 @@ It will give us something like this :
 	version: "3.9"
   
   services:
-  	frontend:
+  	  frontend:
+        image: gitea/gitea:1.19.1
+        container_name: gitea
+        restart: unless-stopped
+        depends_on:
+          - database
+        volumes:
+          - ./gitea-data:/data
+          - /etc/timezone:/etc/timezone:ro
+          - /etc/localtime:/etc/localtime:ro
+        environment:
+          - USER_UID=1000
+          - USER_GID=1000
+          - GITEA__database__DB_TYPE=postgres
+          - GITEA__database__HOST=database:5432
+          - GITEA__database__NAME=gitea
+          - GITEA__database__USER=gitea
+          - GITEA__database__PASSWD=someRandomPassword
+        ports:
+          - "127.0.0.1:3000:3000"
+        networks:
+          - ldap_network
     	
 ```
