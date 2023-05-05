@@ -2,7 +2,7 @@
 title: Docker Compose
 description: Standard used for our docker-compose files
 published: true
-date: 2023-05-05T18:02:18.851Z
+date: 2023-05-05T18:02:49.585Z
 tags: it, server
 editor: markdown
 dateCreated: 2023-05-05T17:35:48.358Z
@@ -54,6 +54,7 @@ The service attributes order is as follows:
 - command: cmd commands to pass the container
 - environment: the env files to pass to the container
 - ports: The ports to open between the server:container. We will always specify the home on the serverside ```127.0.0.1:port:containerport```
+- links: links to other services in the same docker-compose
 - networks : specifies if the services uses a specific network
 
 
