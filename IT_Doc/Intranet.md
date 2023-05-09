@@ -2,7 +2,7 @@
 title: Intranet
 description: Bye-bye Atlassian !
 published: true
-date: 2023-05-09T16:50:13.595Z
+date: 2023-05-09T18:14:00.969Z
 tags: 
 editor: markdown
 dateCreated: 2023-05-09T03:30:25.109Z
@@ -60,5 +60,11 @@ We set up multple projects, each project get it's own kanban and time reports.
 
 ![intranet-leantime-2.png](/it-documentation/intranet-leantime-2.png)
 
-You should have access to everything, if you dont, contact the IT Team.
+You cand login with your LDAP account and and you should have access to everything, if you dont, contact the IT Team.
+
+### Tasks
+
+![intranet-leantime-3.png](/it-documentation/intranet-leantime-3.png)
+
+You can create task here and 
 
