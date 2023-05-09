@@ -2,7 +2,7 @@
 title: Intranet
 description: Bye-bye Atlassian !
 published: true
-date: 2023-05-09T18:14:00.969Z
+date: 2023-05-09T20:04:14.864Z
 tags: 
 editor: markdown
 dateCreated: 2023-05-09T03:30:25.109Z
@@ -66,5 +66,5 @@ You cand login with your LDAP account and and you should have access to everythi
 
 ![intranet-leantime-3.png](/it-documentation/intranet-leantime-3.png)
 
-You can create task here and 
+You can create task here and asign to a step, set it's priority. 
 
