@@ -2,7 +2,7 @@
 title: Intranet
 description: Bye-bye Atlassian !
 published: true
-date: 2023-05-09T04:34:17.284Z
+date: 2023-05-09T04:52:30.530Z
 tags: 
 editor: markdown
 dateCreated: 2023-05-09T03:30:25.109Z
@@ -48,3 +48,5 @@ PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8v
 
 > We dont give you the password directly, so can you choose it ;)
 {.is-info}
+
+4. 	
